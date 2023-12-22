@@ -1,7 +1,7 @@
 .global main
 
 main:
-	PUSH {FP, LR}    	@ save frame and stack pointer
+	PUSH {FP, LR}		@ save frame and stack pointer
 	MOV R11, SP		@ save stack to frame
 	MOV R0, #3		@ add 3 to list
 	BL add
