@@ -1,25 +1,25 @@
 .global main
 
 main:
-    LDR R0, =array
-    LDR R1, =size
+    	LDR R0, =array
+    	LDR R1, =size
 	BL fun1
-    LDR R0, =array
+    	LDR R0, =array
 	MOV R1, #0
 	BL fun2
 	LDR R0, =array
-    LDR R1, =size
+    	LDR R1, =size
 	BL fun3
 	LDR R0, =array
-    MOV R1, #0
+    	MOV R1, #0
 	BL fun4
 	MOV R7, #1
 	SVC 0
 	
 fun1:
-    SUB R1, R1, #1
-    LSL R1, R1, #2
-    ADD R1, R0, R1
+    	SUB R1, R1, #1
+    	LSL R1, R1, #2
+    	ADD R1, R0, R1
 loop_fun1:
 	LDR R2, [r0]
 	LDR R3, [r1]
@@ -43,24 +43,24 @@ loop_fun2:
 	
 fun3:
 loop_fun3_1:
-    MOV     R2, #0
-    MOV     R6, #0
+    	MOV R2, #0
+    	MOV R6, #0
 loop_fun3_2:
-    ADD     R3, R2, #1
-    CMP     R3, R1
-    BGE     end_loop_fun3_2
-    LDR     R4, [R0, R2, LSL #2]
-    LDR     R5, [R0, R3, LSL #2]
-    CMP     R4, R5
-    STRGT   R5, [R0, R2, LSL #2]
-    STRGT   R4, [R0, R3, LSL #2]
-    ADDGT   R6, R6, #1
-    MOV     R2, R3
-    B       loop_fun3_2
+    	ADD R3, R2, #1
+    	CMP R3, R1
+    	BGE end_loop_fun3_2
+    	LDR R4, [R0, R2, LSL #2]
+    	LDR R5, [R0, R3, LSL #2]
+    	CMP R4, R5
+    	STRGT R5, [R0, R2, LSL #2]
+    	STRGT R4, [R0, R3, LSL #2]
+    	ADDGT R6, R6, #1
+    	MOV R2, R3
+    	B loop_fun3_2
 end_loop_fun3_2:
-    CMP     R6, #0
-    SUBGT   R1, R1, #1
-    BGT     loop_fun3_1
+    	CMP R6, #0
+    	SUBGT R1, R1, #1
+    	BGT loop_fun3_1
 	BX LR
 
 fun4:
@@ -79,7 +79,6 @@ loop_fun4_2:
 	SUB R3, R3, R4
 	CMP R3, #0 
 	BGT loop_fun4_2
-	@R2 mean
 	MOV R1, #0
 	MOV R5, #0
 loop_fun4_3:	
@@ -90,7 +89,6 @@ loop_fun4_3:
 	ADD R1, R1, #1
 	CMP R1, #size
 	BLT loop_fun4_3
-	@ R5 sqdiff	
 	MOV R2, #0
 	LDR R6, =size
 loop_fun4_4:
@@ -100,10 +98,7 @@ loop_fun4_4:
 	BGT loop_fun4_4
 	MOV R0, R2
 	BX LR
-	
 
 .data	
 array: .word 1, 2, 3, 4, 5
 size = 5
-
-
