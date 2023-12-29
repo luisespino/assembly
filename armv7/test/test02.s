@@ -32,17 +32,15 @@ loop_fun1:
 	BX LR
 	
 fun2: 
-loop_fun2:
 	LDR R2, [R0, R1, LSL #2]
 	LSL R2, R2, #1
 	STR R2, [R0, R1, LSL #2]
 	ADD R1, R1, #1
 	CMP R1, #size
-	BLT loop_fun2
+	BLT fun2
 	BX LR
 	
 fun3:
-loop_fun3_1:
     	MOV R2, #0
     	MOV R6, #0
 loop_fun3_2:
@@ -60,7 +58,7 @@ loop_fun3_2:
 end_loop_fun3_2:
     	CMP R6, #0
     	SUBGT R1, R1, #1
-    	BGT loop_fun3_1
+    	BGT fun3
 	BX LR
 
 fun4:
