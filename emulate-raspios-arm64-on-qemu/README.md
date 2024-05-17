@@ -1,4 +1,4 @@
-# Guía para la instalación de la consola de Raspberry Pi OS ARM64 en QEMU
+# Guía para ejecutar la consola de Raspberry Pi OS ARM64 en QEMU
 **(usando Raspberry Pi 3b)**
 **(Se puede utilizar ya sea Windows, Linux o MAC)**
 
