@@ -1,4 +1,4 @@
-# Guía para ejecutar la consola de Arch Linux en Android de 64 bits
+# Guía para ejecutar la consola de Arch Linux ARM64 en Android
 
 Requisitos: Tener cualquier télefono que tenga un procesador Cortex-A35 en adelante o un Snapdragon Series 2 en adelante para que tengan soporte de 64 bits.
 
