@@ -5,25 +5,25 @@
 1. Instalar la aplicación UserLAnd
 
 <p align="center">
-<img src="https://github.com/luisespino/assembly/blob/main/android-archlinux/img/userland1.jpg" width="400" >
+<img src="https://github.com/luisespino/assembly/blob/main/emulate-archlinux-arm64-on-android/img/userland1.jpg" width="400" >
 </p>
 
 2. Al ejecutarla hacer clic en la distribución Arch (ya que está distribución trae más comandos instalados)
 
 <p align="center">
-<img src="https://github.com/luisespino/assembly/blob/main/android-archlinux/img/userland2.jpg" width="150" >
+<img src="https://github.com/luisespino/assembly/blob/main/emulate-archlinux-arm64-on-android/img/userland2.jpg" width="150" >
 </p>
 
 3. Configurar para ejecutar en terminal y esperar que descargue los archivos y termine de instalar 
 
 <p align="center">
-<img src="https://github.com/luisespino/assembly/blob/main/android-archlinux/img/userland3.jpg" width="200" >
+<img src="https://github.com/luisespino/assembly/blob/main/emulate-archlinux-arm64-on-android/img/userland3.jpg" width="200" >
 </p>
 
 4. En consola, ejecutar nano para crear un archivo en lenguaje ensamblador, por ejemplo, test.s
 
 <p align="center">
-<img src="https://github.com/luisespino/assembly/blob/main/android-archlinux/img/userland4.jpg" width="300" >
+<img src="https://github.com/luisespino/assembly/blob/main/emulate-archlinux-arm64-on-android/img/userland4.jpg" width="300" >
 </p>
 
 > nano test.s
@@ -38,7 +38,7 @@ _start:
 ```
 
 <p align="center">
-<img src="https://github.com/luisespino/assembly/blob/main/android-archlinux/img/userland5.jpg" width="200" >
+<img src="https://github.com/luisespino/assembly/blob/main/emulate-archlinux-arm64-on-android/img/userland5.jpg" width="200" >
 </p>
 
 5. Finalmente, ensamblar, enlazar y ejecutar el archivo test.
@@ -49,5 +49,5 @@ ld -o test test.o
 ./test ; echo $?
 ```
 <p align="center">
-<img src="https://github.com/luisespino/assembly/blob/main/android-archlinux/img/userland6.jpg" width="300" >
+<img src="https://github.com/luisespino/assembly/blob/main/emulate-archlinux-arm64-on-android/img/userland6.jpg" width="300" >
 </p>
