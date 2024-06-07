@@ -2,7 +2,7 @@
 
 _start:
 	mov x0, 1	    // set stdout
-	ldr x1, =msg	// load msg
+	ldr x1, =msg	    // load msg
 	mov x2, 14	    // size msg
 	mov x8, 64	    // write syscall_num
 	svc 0		    // generic syscall
