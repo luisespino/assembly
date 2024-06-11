@@ -10,6 +10,14 @@
 
 .global _start
 
+.data
+msg:
+    .ascii "Enter 1 digit: "
+
+.bss
+input: .space 2
+
+.text
 _start:
     mov x0, 1       // stdout
     ldr x1, =msg    // load msg
@@ -38,12 +46,4 @@ _start:
 
     mov x0, 0       // return value
     mov x8, 93      // exit syscal_num
-    svc 0           // generic syscall
-
-.data
-msg:
-    .ascii "Enter 1 digit: "
-
-.bss
-input: .space 2
-
+    svc 0           // syscall
