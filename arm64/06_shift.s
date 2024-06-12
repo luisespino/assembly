@@ -1,10 +1,7 @@
 /*
 
-    Print if digit is odd or even
+    Test asr, lsr, lsl, ror
     Luis Espino 2024
-
-    output:
-    [print 1-odd or 0-even from stdin]
 
 */
 
