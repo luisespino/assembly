@@ -3,8 +3,7 @@
     Slope of a line
     Luis Espino 2024
 
-    [./07_slope ; echo $?]
-
+    [./07_sloscrpe ; echo $?]
 
 */
 
