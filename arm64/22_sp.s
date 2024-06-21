@@ -1,5 +1,5 @@
 /*
-    area = base x altura
+    area = base x height
     Luis Espino 2024
 */
 
