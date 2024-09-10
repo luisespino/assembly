@@ -6,5 +6,5 @@ _start:
 	li t1, 0x000000FF	# mask to clean left 6 hex
 	and a0, t0, t1		# clean and set in a0
 	
-	li a7, 93		    # exit
+	li a7, 93           # exit
 	ecall
